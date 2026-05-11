@@ -1,63 +1,63 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #0f172a;
-  color: white;
-  line-height: 1.6;
+    font-family: Arial, sans-serif;
+    background-color: #0f172a;
+    color: white;
+    line-height: 1.6;
 }
 
 header {
-  background-color: #1e293b;
-  padding: 20px;
-  position: sticky;
-  top: 0;
+    background-color: #1e293b;
+    padding: 20px;
+    position: sticky;
+    top: 0;
 }
 
 header h1 {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
+    display: flex;
+    gap: 20px;
+    list-style: none;
 }
 
 nav a {
-  color: #38bdf8;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-  }
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
 nav a:hover {
-  color: #ffffff;
+    color: #ffffff;
 }
 
 section {
-  padding: 60px 20px;
-  border-bottom: 1px solid #334155;
+    padding: 60px 20px;
+    border-bottom: 1px solid #334155;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  scroll-margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    scroll-margin-top: 120px;
 }
 
 section h2 {
-  margin-bottom: 15px;
-  color: #38bdf8;
+    margin-bottom: 15px;
+    color: #38bdf8;
 }
 
 footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #1e293b;
+    text-align: center;
+    padding: 20px;
+    background-color: #1e293b;
 }
 
 html {
@@ -82,8 +82,19 @@ section:hover {
     }
 
     nav ul {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;
+        gap: 20px;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 10px;
+    }
+
+    nav {
+        overflow-x: auto;
+    }
+
+    nav a {
+        font-size: 16px;
     }
 
     section {
@@ -105,7 +116,7 @@ section:hover {
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
-     display: inline-block;
+    display: inline-block;
 }
 
 .botao:hover {
@@ -160,6 +171,6 @@ section {
 
 @media (max-width: 768px) {
     section {
-        scroll-margin-top: 235px;
+        scroll-margin-top: 120px;
     }
 }
