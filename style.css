@@ -153,3 +153,13 @@ section:hover {
     max-width: 700px;
     margin: 20px 0;
 }
+
+section {
+    scroll-margin-top: 120px;
+}
+
+@media (max-width: 768px) {
+    section {
+        scroll-margin-top: 235px;
+    }
+}
