@@ -52,3 +52,9 @@ Ao concluir este projeto, será possível:
 - Estruturar páginas para pequenas empresas e portfólios
 - Aplicar boas práticas de front-end
 - Melhorar a organização visual e experiência do usuário
+
+## 🌐 Projeto Online
+
+Acesse a versão publicada do projeto:
+
+https://flaviapaiva234.github.io/spa-responsive-qa/
