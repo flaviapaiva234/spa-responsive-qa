@@ -119,6 +119,14 @@ section:hover {
     display: inline-block;
 }
 
+.botao-container {
+    width: 100%;
+    max-width: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    }
+
 .botao:hover {
     background-color: #ffffff;
 }
@@ -128,6 +136,7 @@ section:hover {
     gap: 20px;
     margin-top: 30px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card {
@@ -138,6 +147,14 @@ section:hover {
     min-width: 250px;
     transition: 0.3s;
     border: 1px solid #334155;
+   }
+
+   .cards-centralizados {
+    justify-content: center;
+}
+
+.card-centralizado {
+    text-align: center;
 }
 
 .card:hover {
