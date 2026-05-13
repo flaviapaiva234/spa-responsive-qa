@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bug Reports | SPA Responsive QA</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
@@ -26,9 +28,15 @@
         <h2>🐞 Bug Reports</h2>
         <p>Registro de falhas e inconsistências identificadas durante os testes da aplicação.</p>
 
+        <div class="filtros">
+            <button onclick="filtrarBugs('todos')">Todos</button>
+            <button onclick="filtrarBugs('aberto')">Abertos</button>
+            <button onclick="filtrarBugs('corrigido')">Corrigidos</button>
+        </div>
+
         <div class="cards-container cards-centralizados">
 
-            <div class="card">
+            <div class="card bug-card" data-status="aberto">
                 <h3>BUG-001 — Botão “Ver Serviços” ocupa largura excessiva no mobile</h3>
 
                 <p><strong>Severidade:</strong> Baixa</p>
@@ -47,7 +55,7 @@
                 <p><strong>Status:</strong> 🟡 Aberto</p>
             </div>
 
-            <div class="card">
+            <div class="card bug-card" data-status="corrigido">
                 <h3>BUG-002 — Espaçamento excessivo entre seções em resolução desktop</h3>
 
                 <p><strong>Severidade:</strong> Baixa</p>
@@ -81,4 +89,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

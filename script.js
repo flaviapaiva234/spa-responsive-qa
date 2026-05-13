@@ -17,3 +17,25 @@ function animarContador(id, valorFinal) {
 animarContador("total-testes", 3);
 animarContador("total-bugs", 2);
 animarContador("total-checklist", 4);
+
+function filtrarBugs(status) {
+
+    const bugs = document.querySelectorAll(".bug-card");
+
+    bugs.forEach((bug) => {
+
+        if (status === "todos") {
+            bug.style.display = "block";
+        }
+
+        else if (bug.dataset.status === status) {
+            bug.style.display = "block";
+        }
+
+        else {
+            bug.style.display = "none";
+        }
+
+    });
+
+}
