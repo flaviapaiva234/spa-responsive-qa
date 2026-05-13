@@ -29,9 +29,9 @@
         <p>Registro de falhas e inconsistências identificadas durante os testes da aplicação.</p>
 
         <div class="filtros">
-            <button onclick="filtrarBugs('todos')">Todos</button>
-            <button onclick="filtrarBugs('aberto')">Abertos</button>
-            <button onclick="filtrarBugs('corrigido')">Corrigidos</button>
+            <button class="filtro-btn ativo" onclick="filtrarBugs('todos', this)">Todos</button>
+            <button class="filtro-btn" onclick="filtrarBugs('aberto', this)">Abertos</button>
+            <button class="filtro-btn" onclick="filtrarBugs('corrigido', this)">Corrigidos</button>
         </div>
 
         <div class="cards-container cards-centralizados">

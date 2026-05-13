@@ -18,7 +18,15 @@ animarContador("total-testes", 3);
 animarContador("total-bugs", 2);
 animarContador("total-checklist", 4);
 
-function filtrarBugs(status) {
+function filtrarBugs(status, botaoSelecionado) {
+
+    const botoes = document.querySelectorAll(".filtro-btn");
+
+    botoes.forEach((botao) => {
+        botao.classList.remove("ativo");
+    });
+
+    botaoSelecionado.classList.add("ativo");
 
     const bugs = document.querySelectorAll(".bug-card");
 
