@@ -1,9 +1,19 @@
 console.log("SPA Responsive QA carregada com sucesso!");
 
-const totalTestes = 3;
-const totalBugs = 2;
-const totalChecklist = 4;
+function animarContador(id, valorFinal) {
+    let valorAtual = 0;
+    const elemento = document.getElementById(id);
 
-document.getElementById("total-testes").textContent = totalTestes;
-document.getElementById("total-bugs").textContent = totalBugs;
-document.getElementById("total-checklist").textContent = totalChecklist;
+    const intervalo = setInterval(() => {
+        if (valorAtual < valorFinal) {
+            valorAtual++;
+            elemento.textContent = valorAtual;
+        } else {
+            clearInterval(intervalo);
+        }
+    }, 200);
+}
+
+animarContador("total-testes", 3);
+animarContador("total-bugs", 2);
+animarContador("total-checklist", 4);
