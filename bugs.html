@@ -13,6 +13,10 @@
     <header>
         <h1>SPA Responsive QA</h1>
 
+        <button id="toggle-theme" class="botao-tema">
+            🌙 Alternar tema
+        </button>
+
         <nav>
             <ul>
                 <li><a href="index.html#home">Home</a></li>
@@ -30,22 +34,19 @@
 
         <div class="filtros">
 
-    <button class="filtro-btn ativo"
-        onclick="filtrarBugs('todos', this)">
-        Todos (<span id="count-todos">0</span>)
-    </button>
+            <button class="filtro-btn ativo" onclick="filtrarBugs('todos', this)">
+                Todos (<span id="count-todos">0</span>)
+            </button>
 
-    <button class="filtro-btn"
-        onclick="filtrarBugs('aberto', this)">
-        Abertos (<span id="count-abertos">0</span>)
-    </button>
+            <button class="filtro-btn" onclick="filtrarBugs('aberto', this)">
+                Abertos (<span id="count-abertos">0</span>)
+            </button>
 
-    <button class="filtro-btn"
-        onclick="filtrarBugs('corrigido', this)">
-        Corrigidos (<span id="count-corrigidos">0</span>)
-    </button>
+            <button class="filtro-btn" onclick="filtrarBugs('corrigido', this)">
+                Corrigidos (<span id="count-corrigidos">0</span>)
+            </button>
 
-</div>
+        </div>
 
         <div class="cards-container cards-centralizados">
 

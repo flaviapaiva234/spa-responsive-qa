@@ -108,3 +108,27 @@ function exibirResultadoQA() {
         textoResultado.textContent = "❌ Atenção: a aplicação precisa de melhorias antes de ser considerada aprovada.";
     }
 }
+
+const botaoTema = document.getElementById("toggle-theme");
+
+if (localStorage.getItem("tema") === "claro") {
+    document.body.classList.add("light-mode");
+
+    if (botaoTema) {
+        botaoTema.textContent = "☀️ Tema claro";
+    }
+}
+
+if (botaoTema) {
+    botaoTema.addEventListener("click", () => {
+        document.body.classList.toggle("light-mode");
+
+        if (document.body.classList.contains("light-mode")) {
+            localStorage.setItem("tema", "claro");
+            botaoTema.textContent = "☀️ Tema claro";
+        } else {
+            localStorage.setItem("tema", "escuro");
+            botaoTema.textContent = "🌙 Tema escuro";
+        }
+    });
+}

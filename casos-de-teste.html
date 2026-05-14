@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casos de Teste | SPA Responsive QA</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
         <h1>SPA Responsive QA</h1>
+
+        <button id="toggle-theme" class="botao-tema">
+            🌙 Alternar tema
+        </button>
 
         <nav>
             <ul>
@@ -32,13 +38,15 @@
                 <h3>CT-001 — Verificar carregamento da página inicial</h3>
                 <p><strong>Objetivo:</strong> validar se a página principal carrega corretamente.</p>
                 <p><strong>Pré-condição:</strong> servidor Live Server em execução.</p>
-                <p><strong>Resultado esperado:</strong> exibir menu, título principal, botão, cards, depoimentos e footer.</p>
+                <p><strong>Resultado esperado:</strong> exibir menu, título principal, botão, cards, depoimentos e
+                    footer.</p>
                 <p><strong>Status:</strong> ✅ Aprovado</p>
             </div>
 
             <div class="card">
                 <h3>CT-002 — Verificar funcionamento do menu de navegação</h3>
-                <p><strong>Objetivo:</strong> validar se os links do menu direcionam corretamente para as seções da página.</p>
+                <p><strong>Objetivo:</strong> validar se os links do menu direcionam corretamente para as seções da
+                    página.</p>
                 <p><strong>Resultado esperado:</strong> navegação suave até a seção correspondente.</p>
                 <p><strong>Status:</strong> ✅ Aprovado</p>
             </div>
@@ -63,4 +71,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -119,6 +119,22 @@ section:hover {
     display: inline-block;
 }
 
+.botao-tema {
+    background-color: #38bdf8;
+    color: #0f172a;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.botao-tema:hover {
+    background-color: #ffffff;
+}
+
 .botao-container {
     width: 100%;
     max-width: none;
@@ -217,4 +233,75 @@ section {
 .filtro-btn.ativo {
     background-color: #ffffff;
     color: #0f172a;
+}
+
+.light-mode {
+    background-color: #f4f7fb;
+    color: #0f172a;
+}
+
+.light-mode header {
+    background-color: #dbeafe;
+}
+
+.light-mode section {
+    border-color: #cbd5e1;
+}
+
+.light-mode .card {
+    background-color: #ffffff;
+    color: #0f172a;
+    border: 1px solid #cbd5e1;
+}
+
+.light-mode h1,
+.light-mode h2,
+.light-mode h3 {
+    color: #2563eb;
+}
+
+.light-mode p,
+.light-mode li {
+    color: #1e293b;
+}
+
+.light-mode nav a {
+    color: #2563eb;
+}
+
+.light-mode .botao,
+.light-mode .botao-tema,
+.light-mode .filtro-btn {
+    background-color: #2563eb;
+    color: white;
+}
+
+.light-mode .botao:hover,
+.light-mode .botao-tema:hover,
+.light-mode .filtro-btn:hover {
+    background-color: #1d4ed8;
+}
+
+.light-mode section:hover {
+    background-color: #f4f7fb;
+}
+
+.light-mode #home:hover {
+    background-color: #f4f7fb;
+}
+
+.light-mode .card:hover {
+    background-color: #ffffff;
+}
+
+.card a:visited,
+.card-link:visited,
+.card-link p:visited {
+    color: #38bdf8;
+}
+
+body:not(.light-mode) .card a:hover,
+body:not(.light-mode) .card-link:hover,
+body:not(.light-mode) .card-link:hover p {
+    color: #ffffff;
 }
