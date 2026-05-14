@@ -305,3 +305,13 @@ body:not(.light-mode) .card-link:hover,
 body:not(.light-mode) .card-link:hover p {
     color: #ffffff;
 }
+
+body:not(.light-mode) .botao {
+    background-color: #38bdf8;
+    color: #0f172a;
+}
+
+body:not(.light-mode) .botao:hover {
+    background-color: #ffffff;
+    color: #0f172a;
+}
