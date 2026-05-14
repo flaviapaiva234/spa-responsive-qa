@@ -47,3 +47,17 @@ function filtrarBugs(status, botaoSelecionado) {
     });
 
 }
+
+function atualizarContadoresBugs() {
+    const bugs = document.querySelectorAll(".bug-card");
+
+    const total = bugs.length;
+    const abertos = document.querySelectorAll('.bug-card[data-status="aberto"]').length;
+    const corrigidos = document.querySelectorAll('.bug-card[data-status="corrigido"]').length;
+
+    document.getElementById("count-todos").textContent = total;
+    document.getElementById("count-abertos").textContent = abertos;
+    document.getElementById("count-corrigidos").textContent = corrigidos;
+}
+
+atualizarContadoresBugs();
