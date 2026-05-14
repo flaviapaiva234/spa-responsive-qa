@@ -72,6 +72,29 @@
     </div>
 </section>
 
+<!-- ASSISTENTE INTERATIVO DE QA -->
+<section id="assistente-qa">
+    <h2>🤖 Assistente Interativo de QA</h2>
+
+    <p>
+        Responda algumas perguntas rápidas para receber uma sugestão de validação QA.
+    </p>
+
+    <div class="card card-centralizado">
+        <h3 id="pergunta-qa">A aplicação carregou corretamente?</h3>
+
+        <button class="botao" onclick="responderQA('sim')">Sim</button>
+        <button class="botao" onclick="responderQA('nao')">Não</button>
+
+        <p id="progresso-qa">Pergunta 1 de 5</p>
+    </div>
+
+    <div class="card" id="resultado-qa" style="display: none;">
+        <h3>Resumo da Análise QA</h3>
+        <p id="texto-resultado-qa"></p>
+    </div>
+</section>
+
   <!-- SERVIÇOS -->
   <section id="servicos">
     <h2>Serviços</h2>

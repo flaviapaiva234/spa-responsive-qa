@@ -49,6 +49,12 @@ function filtrarBugs(status, botaoSelecionado) {
 }
 
 function atualizarContadoresBugs() {
+    const contadorTodos = document.getElementById("count-todos");
+
+    if (!contadorTodos) {
+        return;
+    }
+
     const bugs = document.querySelectorAll(".bug-card");
 
     const total = bugs.length;
@@ -61,3 +67,44 @@ function atualizarContadoresBugs() {
 }
 
 atualizarContadoresBugs();
+
+const perguntasQA = [
+    "A aplicação carregou corretamente?",
+    "O menu de navegação funcionou?",
+    "Os cards ficaram organizados visualmente?",
+    "A versão mobile ficou responsiva?",
+    "Os textos ficaram legíveis?"
+];
+
+let perguntaAtual = 0;
+let respostasSim = 0;
+
+function responderQA(resposta) {
+    if (resposta === "sim") {
+        respostasSim++;
+    }
+
+    perguntaAtual++;
+
+    if (perguntaAtual < perguntasQA.length) {
+        document.getElementById("pergunta-qa").textContent = perguntasQA[perguntaAtual];
+        document.getElementById("progresso-qa").textContent = `Pergunta ${perguntaAtual + 1} de ${perguntasQA.length}`;
+    } else {
+        exibirResultadoQA();
+    }
+}
+
+function exibirResultadoQA() {
+    const resultado = document.getElementById("resultado-qa");
+    const textoResultado = document.getElementById("texto-resultado-qa");
+
+    resultado.style.display = "block";
+
+    if (respostasSim === perguntasQA.length) {
+        textoResultado.textContent = "✅ Resultado positivo: a aplicação apresentou boa qualidade nos pontos avaliados.";
+    } else if (respostasSim >= 3) {
+        textoResultado.textContent = "⚠️ Resultado parcial: a aplicação está funcional, mas alguns pontos precisam ser revisados.";
+    } else {
+        textoResultado.textContent = "❌ Atenção: a aplicação precisa de melhorias antes de ser considerada aprovada.";
+    }
+}
