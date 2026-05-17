@@ -132,3 +132,92 @@ if (botaoTema) {
         }
     });
 }
+
+// ===== DASHBOARD QA - Gráficos =====
+document.addEventListener('DOMContentLoaded', () => {
+  // ---------- GRÁFICO DE BUGS ----------
+  const ctxBugs = document.getElementById('grafico-bugs').getContext('2d');
+  let tipoBugs = 'pie'; // inicia como pizza
+  let graficoBugs;
+
+  function criarGraficoBugs(tipo) {
+    if (graficoBugs) graficoBugs.destroy();
+    graficoBugs = new Chart(ctxBugs, {
+      type: tipo,
+      data: {
+        labels: ['Abertos', 'Corrigidos', 'Em andamento'],
+        datasets: [{
+          label: 'Bugs',
+          data: [8, 15, 3],
+          backgroundColor: ['#e74c3c', '#2ecc71', '#f39c12'],
+          borderColor: '#fff',
+          borderWidth: 2
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: tipo === 'bar' ? { y: { beginAtZero: true } } : {},
+        plugins: {
+          legend: tipo === 'pie' ? { position: 'bottom' } : { display: true }
+        }
+      }
+    });
+  }
+
+  criarGraficoBugs(tipoBugs);
+
+  const btnBugs = document.getElementById('toggle-bugs');
+  btnBugs.addEventListener('click', () => {
+    if (tipoBugs === 'pie') {
+      tipoBugs = 'bar';
+      btnBugs.textContent = 'Bugs: Gráfico Barras 📊';
+    } else {
+      tipoBugs = 'pie';
+      btnBugs.textContent = 'Bugs: Gráfico Pizza 🍕';
+    }
+    criarGraficoBugs(tipoBugs);
+  });
+
+  // ---------- GRÁFICO DE MÉTRICAS QA ----------
+  const ctxQA = document.getElementById('grafico-qa').getContext('2d');
+  let tipoMetricas = 'bar'; // inicia como barras
+  let graficoQA;
+
+  function criarGraficoMetricas(tipo) {
+    if (graficoQA) graficoQA.destroy();
+    graficoQA = new Chart(ctxQA, {
+      type: tipo,
+      data: {
+        labels: ['Testes Executados', 'Aprovação (%)', 'Checklist Concluído'],
+        datasets: [{
+          label: 'Resultados',
+          data: [120, 87, 18],
+          backgroundColor: ['#3498db', '#9b59b6', '#1abc9c'],
+          borderColor: '#2c3e50',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: tipo === 'bar' ? { y: { beginAtZero: true } } : {},
+        plugins: {
+          legend: tipo === 'pie' ? { position: 'bottom' } : { display: true }
+        }
+      }
+    });
+  }
+
+  criarGraficoMetricas(tipoMetricas);
+
+  const btnMetricas = document.getElementById('toggle-metricas');
+  btnMetricas.addEventListener('click', () => {
+    if (tipoMetricas === 'bar') {
+      tipoMetricas = 'pie';
+      btnMetricas.textContent = 'Métricas: Gráfico Pizza 🍕';
+    } else {
+      tipoMetricas = 'bar';
+      btnMetricas.textContent = 'Métricas: Gráfico Barra 📊';
+    }
+    criarGraficoMetricas(tipoMetricas);
+  });
+});

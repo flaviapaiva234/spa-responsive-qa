@@ -315,3 +315,12 @@ body:not(.light-mode) .botao:hover {
     background-color: #ffffff;
     color: #0f172a;
 }
+
+/* Centralizar botões do Dashboard QA */
+.dashboard-botoes {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}

@@ -76,6 +76,32 @@
     </div>
 </section>
 
+<!-- DASHBOARD QA -->
+<section id="dashboard-qa">
+    <h2>📊 Dashboard QA</h2>
+
+    <p>
+        Visualização dinâmica das métricas principais do projeto.
+    </p>
+
+   <div class="dashboard-botoes">
+    <button id="toggle-bugs" class="botao-tema">Bugs: Gráfico Barras</button>
+    <button id="toggle-metricas" class="botao-tema">Métricas: Gráfico Pizza</button>
+</div>
+
+    <div class="cards-container cards-centralizados">
+        <div class="card card-centralizado dashboard-card">
+            <h3>Bugs</h3>
+            <canvas id="grafico-bugs"></canvas>
+        </div>
+
+        <div class="card card-centralizado dashboard-card">
+            <h3>Métricas QA</h3>
+            <canvas id="grafico-qa"></canvas>
+        </div>
+    </div>
+</section>
+
 <!-- ASSISTENTE INTERATIVO DE QA -->
 <section id="assistente-qa">
     <h2>🤖 Assistente Interativo de QA</h2>
@@ -197,6 +223,7 @@
     </p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
 
 </body>
