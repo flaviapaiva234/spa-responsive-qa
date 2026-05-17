@@ -324,3 +324,55 @@ body:not(.light-mode) .botao:hover {
   flex-wrap: wrap;
   margin-bottom: 2rem;
 }
+
+/* --- Estilos para a Barra de Progresso Animada --- */
+
+/* Container da barra de progresso: uma "trilha" de fundo */
+.progress-bar-container {
+  width: 100%;
+  background-color: #e0e0e0;    /* Cor do fundo da trilha */
+  border-radius: 25px;          /* Bordas arredondadas */
+  margin: 20px 0;               /* Espaçamento vertical */
+  overflow: hidden;             /* Garante que a barra interna não vaze */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); /* Sombra interna sutil */
+}
+
+/* A barra de progresso que vai crescer */
+.progress-bar-fill {
+  width: 0%;                    /* Começa em 0% de largura */
+  height: 25px;                 /* Altura da barra */
+  background: linear-gradient(to right, #dbeafe, #1d4ed8);   /* 🌟 Degradê de azul claro para escuro 🌟 */
+  border-radius: 25px;          /* Mantém as bordas arredondadas */
+  transition: width 0.5s ease-out; /* 🔥 A MÁGICA ACONTECE AQUI 🔥 */
+                                 /* A propriedade 'width' terá uma transição suave */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  box-sizing: border-box;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* --- Centralização do Assistente QA --- */
+
+#qa-flow {
+  text-align: center;
+}
+
+#qa-flow button,
+#qa-flow .botao {
+  display: inline-block;
+  margin: 8px;
+}
+
+/* Centralização forçada para pergunta e contador */
+#pergunta-qa,
+#progresso-qa {
+  text-align: center !important;
+  width: 100% !important;
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}

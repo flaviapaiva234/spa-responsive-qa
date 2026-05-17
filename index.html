@@ -16,8 +16,8 @@
     <h1>SPA Responsive QA</h1>
 
     <button id="toggle-theme" class="botao-tema">
-    🌙 Alternar tema
-</button>
+      🌙 Alternar tema
+    </button>
 
     <nav>
       <ul>
@@ -54,76 +54,82 @@
     </p>
   </section>
 
-<!-- RESUMO QA -->
-<section id="resumo">
+  <!-- RESUMO QA -->
+  <section id="resumo">
     <h2>Resumo QA</h2>
 
     <div class="cards-container cards-centralizados">
-        <div class="card card-centralizado">
-            <h3 id="total-testes">0</h3>
-            <p>Casos de Teste</p>
-        </div>
+      <div class="card card-centralizado">
+        <h3 id="total-testes">0</h3>
+        <p>Casos de Teste</p>
+      </div>
 
-        <div class="card card-centralizado">
-            <h3 id="total-bugs">0</h3>
-            <p>Bug Reports</p>
-        </div>
+      <div class="card card-centralizado">
+        <h3 id="total-bugs">0</h3>
+        <p>Bug Reports</p>
+      </div>
 
-        <div class="card card-centralizado">
-            <h3 id="total-checklist">0</h3>
-            <p>Itens de Checklist</p>
-        </div>
+      <div class="card card-centralizado">
+        <h3 id="total-checklist">0</h3>
+        <p>Itens de Checklist</p>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- DASHBOARD QA -->
-<section id="dashboard-qa">
+  <!-- DASHBOARD QA -->
+  <section id="dashboard-qa">
     <h2>📊 Dashboard QA</h2>
 
     <p>
-        Visualização dinâmica das métricas principais do projeto.
+      Visualização dinâmica das métricas principais do projeto.
     </p>
 
-   <div class="dashboard-botoes">
-    <button id="toggle-bugs" class="botao-tema">Bugs: Gráfico Barras</button>
-    <button id="toggle-metricas" class="botao-tema">Métricas: Gráfico Pizza</button>
-</div>
+    <div class="dashboard-botoes">
+      <button id="toggle-bugs" class="botao-tema">Bugs: Gráfico Barras</button>
+      <button id="toggle-metricas" class="botao-tema">Métricas: Gráfico Pizza</button>
+    </div>
 
     <div class="cards-container cards-centralizados">
-        <div class="card card-centralizado dashboard-card">
-            <h3>Bugs</h3>
-            <canvas id="grafico-bugs"></canvas>
-        </div>
+      <div class="card card-centralizado dashboard-card">
+        <h3>Bugs</h3>
+        <canvas id="grafico-bugs"></canvas>
+      </div>
 
-        <div class="card card-centralizado dashboard-card">
-            <h3>Métricas QA</h3>
-            <canvas id="grafico-qa"></canvas>
-        </div>
+      <div class="card card-centralizado dashboard-card">
+        <h3>Métricas QA</h3>
+        <canvas id="grafico-qa"></canvas>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- ASSISTENTE INTERATIVO DE QA -->
-<section id="assistente-qa">
+  <!-- ASSISTENTE INTERATIVO DE QA -->
+  <section id="assistente-qa">
     <h2>🤖 Assistente Interativo de QA</h2>
-
     <p>
-        Responda algumas perguntas rápidas para receber uma sugestão de validação QA.
+      Responda algumas perguntas rápidas para receber uma sugestão de validação QA.
     </p>
 
-    <div class="card card-centralizado">
-        <h3 id="pergunta-qa">A aplicação carregou corretamente?</h3>
-
+    <!-- Este é o container PRINCIPAL do fluxo de perguntas -->
+    <div id="qa-flow">
+      <p id="pergunta-qa">A aplicação carregou corretamente?</p>
+      <div>
         <button class="botao" onclick="responderQA('sim')">Sim</button>
         <button class="botao" onclick="responderQA('nao')">Não</button>
+      </div>
+      <p id="progresso-qa">Pergunta 1 de 5</p>
 
-        <p id="progresso-qa">Pergunta 1 de 5</p>
+      <!-- Barra de progresso animada -->
+      <div class="progress-bar-container">
+        <div class="progress-bar-fill" id="progress-bar-fill"></div>
+      </div>
     </div>
 
-    <div class="card" id="resultado-qa" style="display: none;">
-        <h3>Resumo da Análise QA</h3>
-        <p id="texto-resultado-qa"></p>
+    <!-- Resultado final (inicialmente oculto) -->
+    <div id="resultado-qa" style="display: none;">
+      <h3>Resumo da Análise QA</h3>
+      <p id="texto-resultado-qa"></p>
     </div>
-</section>
+  </section>
 
   <!-- SERVIÇOS -->
   <section id="servicos">
