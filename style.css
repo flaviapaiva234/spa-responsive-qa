@@ -294,6 +294,13 @@ section {
     background-color: #ffffff;
 }
 
+/* Tema claro - rodapé */
+.light-mode footer {
+    background-color: #dbeafe;
+    color: #0f172a;
+    border-top: 1px solid #cbd5e1;
+}
+
 .card a:visited,
 .card-link:visited,
 .card-link p:visited {
