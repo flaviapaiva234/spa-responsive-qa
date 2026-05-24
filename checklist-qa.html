@@ -9,75 +9,79 @@
 </head>
 
 <body>
+    <div id="relatorio-qa">
+        <header>
+            <h1>SPA Responsive QA</h1>
+            <div class="header-buttons">
+                <button id="toggle-theme" class="botao-tema">
+                    🌙 Alternar tema
+                </button>
+                <button id="exportarRelatorioBtn" class="botao-tema">
+                    📄 Exportar Relatório QA (PDF)
+                </button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="index.html#servicos">Serviços</a></li>
+                    <li><a href="index.html#depoimentos">Depoimentos</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <header>
-        <h1>SPA Responsive QA</h1>
+        <section>
+            <h2>🎨 Checklist QA</h2>
+            <p>Checklist geral de validação visual, funcional e responsiva da aplicação.</p>
 
-        <button id="toggle-theme" class="botao-tema">
-            🌙 Alternar tema
-        </button>
+            <div class="cards-container cards-centralizados">
 
-        <nav>
-            <ul>
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#sobre">Sobre</a></li>
-                <li><a href="index.html#servicos">Serviços</a></li>
-                <li><a href="index.html#depoimentos">Depoimentos</a></li>
-                <li><a href="index.html#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+                <div class="card">
+                    <h3>Estrutura Geral</h3>
+                    <p>✅ Página inicial carregando corretamente</p>
+                    <p>✅ Header visível</p>
+                    <p>✅ Footer visível</p>
+                    <p>✅ Menu de navegação funcionando</p>
+                    <p>✅ Scroll suave funcionando</p>
+                </div>
 
-    <section>
-        <h2>🎨 Checklist QA</h2>
-        <p>Checklist geral de validação visual, funcional e responsiva da aplicação.</p>
+                <div class="card">
+                    <h3>Layout e Responsividade</h3>
+                    <p>✅ Layout responsivo em mobile</p>
+                    <p>✅ Cards reorganizados em telas menores</p>
+                    <p>✅ Textos permanecem legíveis</p>
+                    <p>✅ Botões permanecem clicáveis</p>
+                    <p>✅ Menu permanece funcional no mobile</p>
+                </div>
 
-        <div class="cards-container cards-centralizados">
+                <div class="card">
+                    <h3>Interações Visuais</h3>
+                    <p>✅ Hover dos cards funcionando</p>
+                    <p>✅ Hover dos links do menu funcionando</p>
+                    <p>✅ Hover do botão funcionando</p>
+                    <p>✅ Cards possuem destaque visual</p>
+                </div>
 
-            <div class="card">
-                <h3>Estrutura Geral</h3>
-                <p>✅ Página inicial carregando corretamente</p>
-                <p>✅ Header visível</p>
-                <p>✅ Footer visível</p>
-                <p>✅ Menu de navegação funcionando</p>
-                <p>✅ Scroll suave funcionando</p>
+                <div class="card">
+                    <h3>Compatibilidade</h3>
+                    <p>✅ Testado no Google Chrome</p>
+                    <p>⬜ Testado no Firefox</p>
+                    <p>⬜ Testado no Microsoft Edge</p>
+                    <p>⬜ Testado no Safari</p>
+                </div>
+
             </div>
 
-            <div class="card">
-                <h3>Layout e Responsividade</h3>
-                <p>✅ Layout responsivo em mobile</p>
-                <p>✅ Cards reorganizados em telas menores</p>
-                <p>✅ Textos permanecem legíveis</p>
-                <p>✅ Botões permanecem clicáveis</p>
-                <p>✅ Menu permanece funcional no mobile</p>
-            </div>
+            <p class="botao-container">
+                <a href="index.html#servicos" class="botao">Voltar para Serviços</a>
+            </p>
+        </section>
 
-            <div class="card">
-                <h3>Interações Visuais</h3>
-                <p>✅ Hover dos cards funcionando</p>
-                <p>✅ Hover dos links do menu funcionando</p>
-                <p>✅ Hover do botão funcionando</p>
-                <p>✅ Cards possuem destaque visual</p>
-            </div>
-
-            <div class="card">
-                <h3>Compatibilidade</h3>
-                <p>✅ Testado no Google Chrome</p>
-                <p>⬜ Testado no Firefox</p>
-                <p>⬜ Testado no Microsoft Edge</p>
-                <p>⬜ Testado no Safari</p>
-            </div>
-
-        </div>
-
-        <p class="botao-container">
-            <a href="index.html#servicos" class="botao">Voltar para Serviços</a>
-        </p>
-    </section>
-
-    <footer>
-        <p>© 2026 SPA Responsive QA</p>
-    </footer>
+        <footer>
+            <p>© 2026 SPA Responsive QA</p>
+        </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
