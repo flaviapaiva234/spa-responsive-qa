@@ -237,4 +237,17 @@ document.addEventListener('DOMContentLoaded', () => {
         barraFill.style.width = '0%';
         barraFill.textContent = '0%';
     }
+
+        // ===== BOTÃO EXPORTAR RELATÓRIO PDF =====
+    const botaoPdf = document.getElementById('exportarRelatorioBtn');
+    if (botaoPdf) {
+        botaoPdf.addEventListener('click', function() {
+            // Seleciona o elemento a ser exportado (a página inteira)
+            const elementoParaExportar = document.body;
+            // Gera o PDF e faz o download
+            html2pdf().from(elementoParaExportar).save();
+        });
+    } else {
+        console.log("Botão 'exportarRelatorioBtn' não encontrado (pode estar em outra página)");
+    }
 });
