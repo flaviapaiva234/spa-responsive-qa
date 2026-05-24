@@ -9,97 +9,106 @@
 </head>
 
 <body>
+    <div id="relatorio-qa">
+        <header>
+            <h1>SPA Responsive QA</h1>
 
-    <header>
-        <h1>SPA Responsive QA</h1>
+            <div class="header-buttons">
 
-        <button id="toggle-theme" class="botao-tema">
-            🌙 Alternar tema
-        </button>
+                <button id="toggle-theme" class="botao-tema">
+                    🌙 Alternar tema
+                </button>
 
-        <nav>
-            <ul>
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#sobre">Sobre</a></li>
-                <li><a href="index.html#servicos">Serviços</a></li>
-                <li><a href="index.html#depoimentos">Depoimentos</a></li>
-                <li><a href="index.html#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+                <button id="exportarRelatorioBtn" class="botao-tema">
+                    📄 Exportar Relatório QA (PDF)
+                </button>
 
-    <section>
-        <h2>🐞 Bug Reports</h2>
-        <p>Registro de falhas e inconsistências identificadas durante os testes da aplicação.</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="index.html#servicos">Serviços</a></li>
+                    <li><a href="index.html#depoimentos">Depoimentos</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        <div class="filtros">
+        <section>
+            <h2>🐞 Bug Reports</h2>
+            <p>Registro de falhas e inconsistências identificadas durante os testes da aplicação.</p>
 
-            <button class="filtro-btn ativo" onclick="filtrarBugs('todos', this)">
-                Todos (<span id="count-todos">0</span>)
-            </button>
+            <div class="filtros">
 
-            <button class="filtro-btn" onclick="filtrarBugs('aberto', this)">
-                Abertos (<span id="count-abertos">0</span>)
-            </button>
+                <button class="filtro-btn ativo" onclick="filtrarBugs('todos', this)">
+                    Todos (<span id="count-todos">0</span>)
+                </button>
 
-            <button class="filtro-btn" onclick="filtrarBugs('corrigido', this)">
-                Corrigidos (<span id="count-corrigidos">0</span>)
-            </button>
+                <button class="filtro-btn" onclick="filtrarBugs('aberto', this)">
+                    Abertos (<span id="count-abertos">0</span>)
+                </button>
 
-        </div>
+                <button class="filtro-btn" onclick="filtrarBugs('corrigido', this)">
+                    Corrigidos (<span id="count-corrigidos">0</span>)
+                </button>
 
-        <div class="cards-container cards-centralizados">
-
-            <div class="card bug-card" data-status="aberto">
-                <h3>BUG-001 — Botão “Ver Serviços” ocupa largura excessiva no mobile</h3>
-
-                <p><strong>Severidade:</strong> Baixa</p>
-                <p><strong>Prioridade:</strong> Baixa</p>
-
-                <p><strong>Ambiente:</strong></p>
-                <p>Navegador: Google Chrome</p>
-                <p>Resolução: Mobile (400px)</p>
-
-                <p><strong>Resultado atual:</strong></p>
-                <p>O botão ocupa largura muito grande em telas pequenas.</p>
-
-                <p><strong>Resultado esperado:</strong></p>
-                <p>O botão deveria possuir largura mais equilibrada no layout mobile.</p>
-
-                <p><strong>Status:</strong> 🟡 Aberto</p>
             </div>
 
-            <div class="card bug-card" data-status="corrigido">
-                <h3>BUG-002 — Espaçamento excessivo entre seções em resolução desktop</h3>
+            <div class="cards-container cards-centralizados">
 
-                <p><strong>Severidade:</strong> Baixa</p>
-                <p><strong>Prioridade:</strong> Baixa</p>
+                <div class="card bug-card" data-status="aberto">
+                    <h3>BUG-001 — Botão “Ver Serviços” ocupa largura excessiva no mobile</h3>
 
-                <p><strong>Ambiente:</strong></p>
-                <p>Navegador: Google Chrome</p>
-                <p>Resolução: Desktop</p>
+                    <p><strong>Severidade:</strong> Baixa</p>
+                    <p><strong>Prioridade:</strong> Baixa</p>
 
-                <p><strong>Resultado atual:</strong></p>
-                <p>Algumas seções apresentam espaçamento vertical exagerado.</p>
+                    <p><strong>Ambiente:</strong></p>
+                    <p>Navegador: Google Chrome</p>
+                    <p>Resolução: Mobile (400px)</p>
 
-                <p><strong>Resultado esperado:</strong></p>
-                <p>Espaçamento mais equilibrado entre os blocos da aplicação.</p>
+                    <p><strong>Resultado atual:</strong></p>
+                    <p>O botão ocupa largura muito grande em telas pequenas.</p>
 
-                <p><strong>Status:</strong> ✅ Corrigido</p>
+                    <p><strong>Resultado esperado:</strong></p>
+                    <p>O botão deveria possuir largura mais equilibrada no layout mobile.</p>
+
+                    <p><strong>Status:</strong> 🟡 Aberto</p>
+                </div>
+
+                <div class="card bug-card" data-status="corrigido">
+                    <h3>BUG-002 — Espaçamento excessivo entre seções em resolução desktop</h3>
+
+                    <p><strong>Severidade:</strong> Baixa</p>
+                    <p><strong>Prioridade:</strong> Baixa</p>
+
+                    <p><strong>Ambiente:</strong></p>
+                    <p>Navegador: Google Chrome</p>
+                    <p>Resolução: Desktop</p>
+
+                    <p><strong>Resultado atual:</strong></p>
+                    <p>Algumas seções apresentam espaçamento vertical exagerado.</p>
+
+                    <p><strong>Resultado esperado:</strong></p>
+                    <p>Espaçamento mais equilibrado entre os blocos da aplicação.</p>
+
+                    <p><strong>Status:</strong> ✅ Corrigido</p>
+                </div>
+
             </div>
 
-        </div>
+            <p class="botao-container">
+                <a href="index.html#servicos" class="botao">
+                    Voltar para Serviços
+                </a>
+            </p>
+        </section>
 
-        <p class="botao-container">
-            <a href="index.html#servicos" class="botao">
-                Voltar para Serviços
-            </a>
-        </p>
-    </section>
+        <footer>
+            <p>© 2026 SPA Responsive QA</p>
+        </footer>
 
-    <footer>
-        <p>© 2026 SPA Responsive QA</p>
-    </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
