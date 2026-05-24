@@ -141,7 +141,7 @@ section:hover {
     display: flex;
     justify-content: center;
     margin-top: 30px;
-    }
+}
 
 .botao:hover {
     background-color: #ffffff;
@@ -163,9 +163,9 @@ section:hover {
     min-width: 250px;
     transition: 0.3s;
     border: 1px solid #334155;
-   }
+}
 
-   .cards-centralizados {
+.cards-centralizados {
     justify-content: center;
 }
 
@@ -318,61 +318,140 @@ body:not(.light-mode) .botao:hover {
 
 /* Centralizar botões do Dashboard QA */
 .dashboard-botoes {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
 }
 
 /* --- Estilos para a Barra de Progresso Animada --- */
 
 /* Container da barra de progresso: uma "trilha" de fundo */
 .progress-bar-container {
-  width: 100%;
-  background-color: #e0e0e0;    /* Cor do fundo da trilha */
-  border-radius: 25px;          /* Bordas arredondadas */
-  margin: 20px 0;               /* Espaçamento vertical */
-  overflow: hidden;             /* Garante que a barra interna não vaze */
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); /* Sombra interna sutil */
+    width: 100%;
+    background-color: #e0e0e0;
+    /* Cor do fundo da trilha */
+    border-radius: 25px;
+    /* Bordas arredondadas */
+    margin: 20px 0;
+    /* Espaçamento vertical */
+    overflow: hidden;
+    /* Garante que a barra interna não vaze */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    /* Sombra interna sutil */
 }
 
 /* A barra de progresso que vai crescer */
 .progress-bar-fill {
-  width: 0%;                    /* Começa em 0% de largura */
-  height: 25px;                 /* Altura da barra */
-  background: linear-gradient(to right, #dbeafe, #1d4ed8);   /* 🌟 Degradê de azul claro para escuro 🌟 */
-  border-radius: 25px;          /* Mantém as bordas arredondadas */
-  transition: width 0.5s ease-out; /* 🔥 A MÁGICA ACONTECE AQUI 🔥 */
-                                 /* A propriedade 'width' terá uma transição suave */
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 10px;
-  box-sizing: border-box;
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
+    width: 0%;
+    /* Começa em 0% de largura */
+    height: 25px;
+    /* Altura da barra */
+    background: linear-gradient(to right, #dbeafe, #1d4ed8);
+    /* 🌟 Degradê de azul claro para escuro 🌟 */
+    border-radius: 25px;
+    /* Mantém as bordas arredondadas */
+    transition: width 0.5s ease-out;
+    /* 🔥 A MÁGICA ACONTECE AQUI 🔥 */
+    /* A propriedade 'width' terá uma transição suave */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    box-sizing: border-box;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 /* --- Centralização do Assistente QA --- */
 
 #qa-flow {
-  text-align: center;
+    text-align: center;
 }
 
 #qa-flow button,
 #qa-flow .botao {
-  display: inline-block;
-  margin: 8px;
+    display: inline-block;
+    margin: 8px;
 }
 
 /* Centralização forçada para pergunta e contador */
 #pergunta-qa,
 #progresso-qa {
-  text-align: center !important;
-  width: 100% !important;
-  display: block !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+    text-align: center !important;
+    width: 100% !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* ===== UTILITÁRIO PARA ESCONDER ELEMENTOS NO PDF ===== */
+.no-pdf {
+    display: none !important;
+}
+
+@media print {
+    /* Esconde elementos desnecessários */
+    #exportarRelatorioBtn,
+    .botao-tema,
+    .botao-exportar,
+    nav,
+    .header-buttons,
+    .dashboard-botoes,
+    #toggle-theme {
+        display: none !important;
+    }
+
+    /* Força impressão com cores originais */
+    body, #relatorio-qa {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        margin: 0;
+        padding: 0.5cm;
+        width: 100%;
+        font-size: 12pt;
+    }
+
+    /* Ajusta dashboard para caber no papel */
+    #dashboard-qa,
+    .cards-container,
+    .dashboard-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+    }
+
+    .cards-container {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: space-between !important;
+    }
+
+    .dashboard-card {
+        flex: 1 1 45% !important;
+        margin: 10px !important;
+        page-break-inside: avoid;
+    }
+
+    canvas {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 300px !important;
+    }
+
+    .card, section, canvas {
+        page-break-inside: avoid;
+    }
+
+    section, .card, .dashboard-card {
+        overflow: visible !important;
+        word-wrap: break-word !important;
+    }
+
+    #dashboard-qa {
+        page-break-inside: avoid;
+    }
 }
